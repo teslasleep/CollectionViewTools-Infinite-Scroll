@@ -36,7 +36,7 @@ extension CollectionViewManager: UICollectionViewDelegate {
 
     open func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         cellItem(for: indexPath)?.willDisplay(cell: cell, at: indexPath)
-        self.willDisplayCell(indexPath)
+        self.willDisplayCell?(indexPath)
     }
 
     open func collectionView(_ collectionView: UICollectionView,
