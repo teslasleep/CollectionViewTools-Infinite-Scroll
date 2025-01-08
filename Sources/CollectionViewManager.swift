@@ -16,6 +16,10 @@ open class CollectionViewManager: NSObject {
     public typealias ReusableViewItem = CollectionViewReusableViewItem
     public typealias Completion = (Bool) -> Void
 
+    public typealias WillDisplayCellCompletion = (_ result: IndexPath) -> Void
+
+    public var willDisplayCell: WillDisplayCellCompletion?
+
     /// `UICollectionView` object for managing
     public unowned let collectionView: UICollectionView
 
